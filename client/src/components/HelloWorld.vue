@@ -12,11 +12,17 @@
        </div>
        <hr>
        <div>
-         <a  href="http://192.168.12.51:3005/asdf.xlsx" download="filename">a标签下载</a>
+         <a  href="http://172.19.23.127:3009/track_17.xls" download="filename">a标签下载</a>
+       </div>
+       <br>
+       <div>
+         <span>通过xhr请求下载文件</span>
+         <button @click="downloadFile">xhr进行文件下载</button>
        </div>
   </div>
 </template>
 <script>
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -27,8 +33,20 @@ export default {
   },
   methods:{
     download () {
-       let url = `http://192.168.12.51:3005/downloadSingle?dir=''&name=asdf`;
+       let url = `http://172.19.23.127:3009/downloadSingle?dir=''&name=track_17`;
        window.location.href=url;
+    },
+    downloadFile() { 
+      // 请求和响应头分别分开，这里设置返回的数据类型。responseType在axios API中。
+      this.$http.get('/download', {responseType: 'blob'}).then(res => {
+        var a = document.createElement('a');
+        let url = URL.createObjectURL(res.data);
+        a.href = url;
+        a.download = 'track17.xls';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);   
+      });
     } 
   }
 }
