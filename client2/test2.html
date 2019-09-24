@@ -1,0 +1,1898 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style type="text/css">
+        #scroll_head {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="data_div">
+        <table>
+            @*thead内容及样式同scroll_head中的thead*@
+            @*thead使用深背景色，避免滚动时和tbody内容重叠显示*@
+            <thead> 
+                <tr>
+                    @*一级标题*@
+                    <th class="tt1" colspan="2">一级1</th>
+                    <th class="tt2" colspan="5">一级2</th>
+                    <th class="tt3" colspan="6">一级3</th>
+                </tr>
+                <tr>
+                    @*二级标题*@
+                    <th style="width: 23px;">二级11</th>
+                    <th style="width: 36px;">二级12</th>
+                    <th class="tt" style="width: 40px;">二级21</th>
+                    <th class="tt" style="width: 30px;">二级22</th>
+                    <th class="tt" style="width: 30px;">二级23</th>
+                    <th class="tt" style="width: 30px;">二级23</th>
+                    <th class="tt" style="width: 30px;">二级24</th>
+                    <th class="tt" style="width: 30px;">二级25</th>
+                    <th class="tt" style="width: 30px;">二级31</th>
+                    <th class="tt" style="width: 30px;">二级32</th>
+                    <th class="tt" style="width: 30px;">二级33</th>
+                    <th class="tt" style="width: 30px;">二级33</th>
+                    <th class="tt" style="width: 30px;">二级34</th>
+                    <th class="tt" style="width: 30px;">二级35</th>
+                    <th class="tt" style="width: 30px;">二级36</th>
+                </tr>
+            </thead>
+            <tbody id="data_tbody">
+                数据内容，在数据加载完成后调用copyWidth()函数解决兼容性
+            </tbody>
+        </table>
+    </div>
+    <div id="scroll_head" style="display:block; top: 168px; left: 0px; position: relative;">
+        <table width="100%">
+            <thead>  @*thead使用深背景色，避免滚动时和tbody内容重叠显示*@
+                <tr>
+                    @*一级标题*@
+                    <th class="tt1" colspan="2">一级1</th>
+                    <th class="tt2" colspan="5">一级2</th>
+                    <th class="tt3" colspan="6">一级3</th>
+                </tr>
+                <tr>
+                    @*二级标题*@
+                    <th style="width: 23px;">二级11</th>
+                    <th style="width: 36px;">二级12</th>
+                    <th class="tt" style="width: 40px;">二级21</th>
+                    <th class="tt" style="width: 30px;">二级22</th>
+                    <th class="tt" style="width: 30px;">二级23</th>
+                    <th class="tt" style="width: 30px;">二级23</th>
+                    <th class="tt" style="width: 30px;">二级24</th>
+                    <th class="tt" style="width: 30px;">二级25</th>
+                    <th class="tt" style="width: 30px;">二级31</th>
+                    <th class="tt" style="width: 30px;">二级32</th>
+                    <th class="tt" style="width: 30px;">二级33</th>
+                    <th class="tt" style="width: 30px;">二级33</th>
+                    <th class="tt" style="width: 30px;">二级34</th>
+                    <th class="tt" style="width: 30px;">二级35</th>
+                    <th class="tt" style="width: 30px;">二级36</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html> -->
+
+
+<style>
+    body {
+  text-align: center;
+  font-family: 微软雅黑;
+}
+table > thead > tr > th,
+table > tbody > tr > td {
+  width: 3%!important;
+}
+th {
+  background-color: #4ca9f7;
+  color: white;
+}
+td,
+th {
+  height: 35px;
+  text-align: center;
+}
+#contenter {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+
+#grid1,
+#grid2 {
+  width: 1600px;
+  border: 1px solid gray;
+}
+
+#theadDiv {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden; 
+}
+
+#tbodyDiv {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+
+</style>
+
+
+<div id="contenter">
+    <div id="theadDiv">
+        <table id="grid1" class="fixedTable" border="1" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr style="text-align: center;">
+                    <th rowspan="3">序号</th>
+                    <th rowspan="3">设备名称</th>
+                    <th rowspan="3">型号</th>
+                    <th rowspan="3">类型</th>
+                    <th rowspan="2" colspan="2">上月结存</th>
+                    <th rowspan="2" colspan="2">本月收入</th>
+                    <th colspan="30">本月使用</th>
+                    <th rowspan="2" colspan="2">未发出</th>
+                    <th rowspan="2" colspan="2">本月结存</th>
+                </tr>
+                <tr style="text-align: center;">
+                    <th colspan="2">主线</th>
+                    <th colspan="2">匝道</th>
+                    <th colspan="2">黎里站</th>
+                    <th colspan="2">吴江 吴江南站</th>
+                    <th colspan="2">吴中站</th>
+                    <th colspan="2">城区站</th>
+                    <th colspan="2">相城 阳澄湖站</th>
+                    <th colspan="2">沙家浜站</th>
+                    <th colspan="2">常熟东 董浜站</th>
+                    <th colspan="2">白洋湖服务区</th>
+                    <th colspan="2">阳澄西湖服务区</th>
+                    <th colspan="2">排障一大队</th>
+                    <th colspan="2">排障二大队</th>
+                    <th colspan="2">总控制中心</th>
+                    <th colspan="2">公司机关</th>
+
+                </tr>
+                <tr style="text-align: center;">
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>数量</th>
+                    <th>金额</th>
+
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="tbodyDiv">
+        <table id="grid2" border="1" cellpadding="0" cellspacing="0">
+            <thead style="display:none;">
+                <tr>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                        性别
+                    </th>
+                    <th>
+                        爱好
+                    </th>
+                    <th>
+                        学历
+                    </th>
+                    <th>
+                        特长
+                    </th>
+                    <th>
+                        性格
+                    </th>
+                    <th>
+                        数学
+                    </th>
+                    <th>
+                        语文
+                    </th>
+                    <th>
+                        英语
+                    </th>
+                    <th>
+                        体育
+                    </th>
+                    <th>
+                        美术
+                    </th>
+                    <th>
+                        音乐
+                    </th>
+                    <th>
+                        早操
+                    </th>
+                    <th>
+                        地理
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">苹果3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">150</td>
+                    <td style="text-align:center;">6000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">苹果2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">200</td>
+                    <td style="text-align:center;">26000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align:center;">称台2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">375</td>
+                    <td style="text-align:center;">13875</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align:center;">摄像机1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">275</td>
+                    <td style="text-align:center;">13475</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">5</td>
+                    <td style="text-align:center;">zx验钞机3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3500</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">70</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">6</td>
+                    <td style="text-align:center;">zx彩带7</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">68</td>
+                    <td style="text-align:center;">1088</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">7</td>
+                    <td style="text-align:center;">zx称台3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">4100</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">8</td>
+                    <td style="text-align:center;">苹果1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">9</td>
+                    <td style="text-align:center;">zx彩带12</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">62</td>
+                    <td style="text-align:center;">1302</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">21</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">10</td>
+                    <td style="text-align:center;">zx验钞机2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3400</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">34</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">11</td>
+                    <td style="text-align:center;">zx彩带2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">39</td>
+                    <td style="text-align:center;">429</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">12</td>
+                    <td style="text-align:center;">验钞机3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">250</td>
+                    <td style="text-align:center;">13000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">13</td>
+                    <td style="text-align:center;">zx彩带5</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">44</td>
+                    <td style="text-align:center;">616</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">14</td>
+                    <td style="text-align:center;">摄像机2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">300</td>
+                    <td style="text-align:center;">13800</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">15</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">16</td>
+                    <td style="text-align:center;">zx彩带4</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">87</td>
+                    <td style="text-align:center;">1131</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">17</td>
+                    <td style="text-align:center;">称台3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">332</td>
+                    <td style="text-align:center;">11288</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">18</td>
+                    <td style="text-align:center;">zx称台1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3900</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">19</td>
+                    <td style="text-align:center;">zx苹果2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3100</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">20</td>
+                    <td style="text-align:center;">zx彩带8</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">73</td>
+                    <td style="text-align:center;">1241</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">21</td>
+                    <td style="text-align:center;">验钞机2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">224</td>
+                    <td style="text-align:center;">12320</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">22</td>
+                    <td style="text-align:center;">zx摄像机1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3600</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">72</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">23</td>
+                    <td style="text-align:center;">zx摄像机3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3800</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">24</td>
+                    <td style="text-align:center;">验钞机1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">192</td>
+                    <td style="text-align:center;">9600</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">25</td>
+                    <td style="text-align:center;">zx彩带9</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">32</td>
+                    <td style="text-align:center;">576</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">26</td>
+                    <td style="text-align:center;">zx验钞机1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3300</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align:center;">99</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">27</td>
+                    <td style="text-align:center;">称台1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">350</td>
+                    <td style="text-align:center;">14000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">28</td>
+                    <td style="text-align:center;">zx苹果1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align:center;">90</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">29</td>
+                    <td style="text-align:center;">zx彩带11</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">89</td>
+                    <td style="text-align:center;">1780</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">30</td>
+                    <td style="text-align:center;">zx摄像机2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3700</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">37</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">31</td>
+                    <td style="text-align:center;">zx彩带3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">33</td>
+                    <td style="text-align:center;">396</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">32</td>
+                    <td style="text-align:center;">zx苹果3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">3200</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">33</td>
+                    <td style="text-align:center;">zx彩带6</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">84</td>
+                    <td style="text-align:center;">1260</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">34</td>
+                    <td style="text-align:center;">zx称台2</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">备品备件</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">100</td>
+                    <td style="text-align:center;">4000</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">35</td>
+                    <td style="text-align:center;">摄像机3</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">325</td>
+                    <td style="text-align:center;">13975</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">zx彩带10</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">29</td>
+                    <td style="text-align:center;">551</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">37</td>
+                    <td style="text-align:center;">zx彩带1</td>
+                    <td style="text-align:center;">SATA接口</td>
+                    <td style="text-align:center;">易耗品</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">60</td>
+                    <td style="text-align:center;">600</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align:center;">36</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0</td>
+                    <td style="text-align:center;">0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

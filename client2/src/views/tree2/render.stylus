@@ -1,0 +1,33 @@
+.div-overflow{
+    max-height 650px;
+    overflow auto;
+}
+.table-tree {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.table-bordered {
+  border: 1px solid #ebebeb;
+}
+
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 1px solid #e7e7e7;
+}
+.td-text-align{
+    text-align left;
+}
+.margin-left-tree{
+    margin-left 5px;
+}
+.width-tree-table{
+    width 52%;
+}
+.th-width{
+    width 16%;
+}

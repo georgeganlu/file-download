@@ -1,0 +1,2344 @@
+{
+    "18": {
+        "id": 18,
+        "pid": 0,
+        "name": "速卖通",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            262
+        ],
+        "leader_name": [
+            "余秋欣"
+        ],
+        "target_amount": "7438357.90",
+        "parents": [],
+        "depth": 0,
+        "name_path": "速卖通",
+        "child_ids": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+        ]
+    },
+    "34": {
+        "id": 34,
+        "pid": 18,
+        "name": "武汉二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2711
+        ],
+        "leader_name": [
+            "向兰兰"
+        ],
+        "target_amount": "183329.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-武汉二组",
+        "child_ids": []
+    },
+    "35": {
+        "id": 35,
+        "pid": 18,
+        "name": "武汉黄中琪组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2458
+        ],
+        "leader_name": [
+            "黄中琪"
+        ],
+        "target_amount": "233559.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-武汉黄中琪组",
+        "child_ids": []
+    },
+    "36": {
+        "id": 36,
+        "pid": 18,
+        "name": "七组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1514
+        ],
+        "leader_name": [
+            "齐芳敏"
+        ],
+        "target_amount": "510958.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-七组",
+        "child_ids": []
+    },
+    "37": {
+        "id": 37,
+        "pid": 18,
+        "name": "五组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1191
+        ],
+        "leader_name": [
+            "林卓智"
+        ],
+        "target_amount": "670448.90",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-五组",
+        "child_ids": []
+    },
+    "38": {
+        "id": 38,
+        "pid": 18,
+        "name": "三组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            248
+        ],
+        "leader_name": [
+            "陆海云"
+        ],
+        "target_amount": "1013619.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-三组",
+        "child_ids": []
+    },
+    "39": {
+        "id": 39,
+        "pid": 18,
+        "name": "一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            14
+        ],
+        "leader_name": [
+            "官露露"
+        ],
+        "target_amount": "1218583.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-一组",
+        "child_ids": []
+    },
+    "40": {
+        "id": 40,
+        "pid": 18,
+        "name": "二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1529
+        ],
+        "leader_name": [
+            "丁祝勇"
+        ],
+        "target_amount": "973317.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-二组",
+        "child_ids": []
+    },
+    "41": {
+        "id": 41,
+        "pid": 18,
+        "name": "四组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            15
+        ],
+        "leader_name": [
+            "林晓淳"
+        ],
+        "target_amount": "742249.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-四组",
+        "child_ids": []
+    },
+    "42": {
+        "id": 42,
+        "pid": 18,
+        "name": "八组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            669
+        ],
+        "leader_name": [
+            "尹珍萍"
+        ],
+        "target_amount": "400811.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-八组",
+        "child_ids": []
+    },
+    "43": {
+        "id": 43,
+        "pid": 18,
+        "name": "九组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1507
+        ],
+        "leader_name": [
+            "王勇"
+        ],
+        "target_amount": "222600.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-九组",
+        "child_ids": []
+    },
+    "44": {
+        "id": 44,
+        "pid": 18,
+        "name": "六组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            156
+        ],
+        "leader_name": [
+            "余强"
+        ],
+        "target_amount": "842984.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-六组",
+        "child_ids": []
+    },
+    "45": {
+        "id": 45,
+        "pid": 18,
+        "name": "十组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            672
+        ],
+        "leader_name": [
+            "林发桃"
+        ],
+        "target_amount": "425900.00",
+        "parents": [
+            18
+        ],
+        "depth": 1,
+        "name_path": "速卖通-十组",
+        "child_ids": []
+    },
+    "50": {
+        "id": 50,
+        "pid": 0,
+        "name": "wish",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            20
+        ],
+        "leader_name": [
+            "娄云秀"
+        ],
+        "target_amount": "5432419.00",
+        "parents": [],
+        "depth": 0,
+        "name_path": "wish",
+        "child_ids": [
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80
+        ]
+    },
+    "73": {
+        "id": 73,
+        "pid": 50,
+        "name": "一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            22
+        ],
+        "leader_name": [
+            "丁慧慧"
+        ],
+        "target_amount": "966000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-一组",
+        "child_ids": []
+    },
+    "74": {
+        "id": 74,
+        "pid": 50,
+        "name": "二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3220
+        ],
+        "leader_name": [
+            "俞永毅"
+        ],
+        "target_amount": "900000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-二组",
+        "child_ids": []
+    },
+    "75": {
+        "id": 75,
+        "pid": 50,
+        "name": "三组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            697
+        ],
+        "leader_name": [
+            "杨景诗"
+        ],
+        "target_amount": "556200.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-三组",
+        "child_ids": []
+    },
+    "76": {
+        "id": 76,
+        "pid": 50,
+        "name": "四组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            56
+        ],
+        "leader_name": [
+            "许丽华"
+        ],
+        "target_amount": "942219.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-四组",
+        "child_ids": []
+    },
+    "77": {
+        "id": 77,
+        "pid": 50,
+        "name": "五组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            58
+        ],
+        "leader_name": [
+            "汤慧"
+        ],
+        "target_amount": "1021000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-五组",
+        "child_ids": []
+    },
+    "78": {
+        "id": 78,
+        "pid": 50,
+        "name": "六组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1164
+        ],
+        "leader_name": [
+            "刘超"
+        ],
+        "target_amount": "320000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-六组",
+        "child_ids": []
+    },
+    "79": {
+        "id": 79,
+        "pid": 50,
+        "name": "七组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3766
+        ],
+        "leader_name": [
+            "谭嗣绵"
+        ],
+        "target_amount": "126000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-七组",
+        "child_ids": []
+    },
+    "80": {
+        "id": 80,
+        "pid": 50,
+        "name": "八组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            831
+        ],
+        "leader_name": [
+            "陈丽婷"
+        ],
+        "target_amount": "601000.00",
+        "parents": [
+            50
+        ],
+        "depth": 1,
+        "name_path": "wish-八组",
+        "child_ids": []
+    },
+    "19": {
+        "id": 19,
+        "pid": 0,
+        "name": "eBay本地仓",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            221
+        ],
+        "leader_name": [
+            "朱利梅"
+        ],
+        "target_amount": "11224459.99",
+        "parents": [],
+        "depth": 0,
+        "name_path": "eBay本地仓",
+        "child_ids": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+        ]
+    },
+    "20": {
+        "id": 20,
+        "pid": 19,
+        "name": "服装组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            577
+        ],
+        "leader_name": [
+            "丁静"
+        ],
+        "target_amount": "655878.26",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-服装组",
+        "child_ids": []
+    },
+    "21": {
+        "id": 21,
+        "pid": 19,
+        "name": "汽配组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            167
+        ],
+        "leader_name": [
+            "黄智毅"
+        ],
+        "target_amount": "1545338.99",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-汽配组",
+        "child_ids": []
+    },
+    "22": {
+        "id": 22,
+        "pid": 19,
+        "name": "家居B组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3920
+        ],
+        "leader_name": [
+            "蒋青苗-eBay"
+        ],
+        "target_amount": "1204236.05",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-家居B组",
+        "child_ids": []
+    },
+    "23": {
+        "id": 23,
+        "pid": 19,
+        "name": "电脑办公组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2205
+        ],
+        "leader_name": [
+            "隆云"
+        ],
+        "target_amount": "1882222.24",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-电脑办公组",
+        "child_ids": []
+    },
+    "24": {
+        "id": 24,
+        "pid": 19,
+        "name": "家居A组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            77
+        ],
+        "leader_name": [
+            "任娅丽"
+        ],
+        "target_amount": "1996593.94",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-家居A组",
+        "child_ids": []
+    },
+    "25": {
+        "id": 25,
+        "pid": 19,
+        "name": "运动娱乐组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            121
+        ],
+        "leader_name": [
+            "孙莉"
+        ],
+        "target_amount": "1886921.27",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-运动娱乐组",
+        "child_ids": []
+    },
+    "26": {
+        "id": 26,
+        "pid": 19,
+        "name": "宠物玩具组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1635
+        ],
+        "leader_name": [
+            "詹凯升"
+        ],
+        "target_amount": "834906.54",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-宠物玩具组",
+        "child_ids": []
+    },
+    "27": {
+        "id": 27,
+        "pid": 19,
+        "name": "美妆组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1399
+        ],
+        "leader_name": [
+            "周琴-eBay"
+        ],
+        "target_amount": "536063.07",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-美妆组",
+        "child_ids": []
+    },
+    "28": {
+        "id": 28,
+        "pid": 19,
+        "name": "LED组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1099
+        ],
+        "leader_name": [
+            "朱合奎"
+        ],
+        "target_amount": "434687.87",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-LED组",
+        "child_ids": []
+    },
+    "29": {
+        "id": 29,
+        "pid": 19,
+        "name": "武汉本地仓",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2585
+        ],
+        "leader_name": [
+            "韦宵"
+        ],
+        "target_amount": "247611.76",
+        "parents": [
+            19
+        ],
+        "depth": 1,
+        "name_path": "eBay本地仓-武汉本地仓",
+        "child_ids": []
+    },
+    "47": {
+        "id": 47,
+        "pid": 0,
+        "name": "eBay海外仓",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            259
+        ],
+        "leader_name": [
+            "曹芳"
+        ],
+        "target_amount": "5355033.66",
+        "parents": [],
+        "depth": 0,
+        "name_path": "eBay海外仓",
+        "child_ids": [
+            63,
+            64,
+            65,
+            66,
+            67
+        ]
+    },
+    "63": {
+        "id": 63,
+        "pid": 47,
+        "name": "澳洲组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3051
+        ],
+        "leader_name": [
+            "潘炜芬"
+        ],
+        "target_amount": "289699.89",
+        "parents": [
+            47
+        ],
+        "depth": 1,
+        "name_path": "eBay海外仓-澳洲组",
+        "child_ids": []
+    },
+    "64": {
+        "id": 64,
+        "pid": 47,
+        "name": "德国A组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            257
+        ],
+        "leader_name": [
+            "张攀"
+        ],
+        "target_amount": "1376493.33",
+        "parents": [
+            47
+        ],
+        "depth": 1,
+        "name_path": "eBay海外仓-德国A组",
+        "child_ids": []
+    },
+    "65": {
+        "id": 65,
+        "pid": 47,
+        "name": "德国B组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1582
+        ],
+        "leader_name": [
+            "李同宾"
+        ],
+        "target_amount": "1701324.12",
+        "parents": [
+            47
+        ],
+        "depth": 1,
+        "name_path": "eBay海外仓-德国B组",
+        "child_ids": []
+    },
+    "66": {
+        "id": 66,
+        "pid": 47,
+        "name": "美国组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            247
+        ],
+        "leader_name": [
+            "汤红"
+        ],
+        "target_amount": "846485.20",
+        "parents": [
+            47
+        ],
+        "depth": 1,
+        "name_path": "eBay海外仓-美国组",
+        "child_ids": []
+    },
+    "67": {
+        "id": 67,
+        "pid": 47,
+        "name": "英国组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1624
+        ],
+        "leader_name": [
+            "张嘉君"
+        ],
+        "target_amount": "1141031.12",
+        "parents": [
+            47
+        ],
+        "depth": 1,
+        "name_path": "eBay海外仓-英国组",
+        "child_ids": []
+    },
+    "1": {
+        "id": 1,
+        "pid": 0,
+        "name": "亚马逊一部",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            323
+        ],
+        "leader_name": [
+            "马佳东"
+        ],
+        "target_amount": "5393165.41",
+        "parents": [],
+        "depth": 0,
+        "name_path": "亚马逊一部",
+        "child_ids": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            12,
+            13,
+            14
+        ]
+    },
+    "3": {
+        "id": 3,
+        "pid": 1,
+        "name": "家居A组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1554
+        ],
+        "leader_name": [
+            "王宏伟"
+        ],
+        "target_amount": "816189.71",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-家居A组",
+        "child_ids": []
+    },
+    "4": {
+        "id": 4,
+        "pid": 1,
+        "name": "家居B组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            63
+        ],
+        "leader_name": [
+            "张晓航"
+        ],
+        "target_amount": "659932.00",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-家居B组",
+        "child_ids": []
+    },
+    "5": {
+        "id": 5,
+        "pid": 1,
+        "name": "汽配组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            30
+        ],
+        "leader_name": [
+            "李国庆"
+        ],
+        "target_amount": "795165.39",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-汽配组",
+        "child_ids": []
+    },
+    "6": {
+        "id": 6,
+        "pid": 1,
+        "name": "3C组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            570
+        ],
+        "leader_name": [
+            "李玉清"
+        ],
+        "target_amount": "582435.18",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-3C组",
+        "child_ids": []
+    },
+    "7": {
+        "id": 7,
+        "pid": 1,
+        "name": "唐玉组",
+        "type": 1,
+        "status": 1,
+        "is_bottom": 0,
+        "leader_id": [],
+        "leader_name": [],
+        "target_amount": 0,
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-唐玉组",
+        "child_ids": []
+    },
+    "8": {
+        "id": 8,
+        "pid": 1,
+        "name": "户外组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            33
+        ],
+        "leader_name": [
+            "叶金连"
+        ],
+        "target_amount": "636638.00",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-户外组",
+        "child_ids": []
+    },
+    "9": {
+        "id": 9,
+        "pid": 1,
+        "name": "母婴组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            504
+        ],
+        "leader_name": [
+            "刘蕾"
+        ],
+        "target_amount": "723135.00",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-母婴组",
+        "child_ids": []
+    },
+    "12": {
+        "id": 12,
+        "pid": 1,
+        "name": "美妆组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            60
+        ],
+        "leader_name": [
+            "柳孟娇"
+        ],
+        "target_amount": "742898.00",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-美妆组",
+        "child_ids": []
+    },
+    "13": {
+        "id": 13,
+        "pid": 1,
+        "name": "宠物组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            561
+        ],
+        "leader_name": [
+            "陈宾"
+        ],
+        "target_amount": "261049.13",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-宠物组",
+        "child_ids": []
+    },
+    "14": {
+        "id": 14,
+        "pid": 1,
+        "name": "多品组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1408
+        ],
+        "leader_name": [
+            "张旺"
+        ],
+        "target_amount": "175723.00",
+        "parents": [
+            1
+        ],
+        "depth": 1,
+        "name_path": "亚马逊一部-多品组",
+        "child_ids": []
+    },
+    "46": {
+        "id": 46,
+        "pid": 0,
+        "name": "亚马逊二部",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            2203
+        ],
+        "leader_name": [
+            "卢小威"
+        ],
+        "target_amount": "1813090.00",
+        "parents": [],
+        "depth": 0,
+        "name_path": "亚马逊二部",
+        "child_ids": [
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+        ]
+    },
+    "52": {
+        "id": 52,
+        "pid": 46,
+        "name": "A组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            402
+        ],
+        "leader_name": [
+            "吴舒吉"
+        ],
+        "target_amount": "205879.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-A组",
+        "child_ids": []
+    },
+    "53": {
+        "id": 53,
+        "pid": 46,
+        "name": "B组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            406
+        ],
+        "leader_name": [
+            "江济吉"
+        ],
+        "target_amount": "270000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-B组",
+        "child_ids": []
+    },
+    "54": {
+        "id": 54,
+        "pid": 46,
+        "name": "C组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1684
+        ],
+        "leader_name": [
+            "钟培鹏"
+        ],
+        "target_amount": "240000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-C组",
+        "child_ids": []
+    },
+    "55": {
+        "id": 55,
+        "pid": 46,
+        "name": "D组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2257
+        ],
+        "leader_name": [
+            "孙艳云"
+        ],
+        "target_amount": "160000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-D组",
+        "child_ids": []
+    },
+    "56": {
+        "id": 56,
+        "pid": 46,
+        "name": "E组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3136
+        ],
+        "leader_name": [
+            "杨超凡"
+        ],
+        "target_amount": "149000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-E组",
+        "child_ids": []
+    },
+    "57": {
+        "id": 57,
+        "pid": 46,
+        "name": "F组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            690
+        ],
+        "leader_name": [
+            "王冬梅"
+        ],
+        "target_amount": "164000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-F组",
+        "child_ids": []
+    },
+    "58": {
+        "id": 58,
+        "pid": 46,
+        "name": "G组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1771
+        ],
+        "leader_name": [
+            "肖梦颖"
+        ],
+        "target_amount": "178000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-G组",
+        "child_ids": []
+    },
+    "59": {
+        "id": 59,
+        "pid": 46,
+        "name": "H组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2373
+        ],
+        "leader_name": [
+            "陈文君"
+        ],
+        "target_amount": "129000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-H组",
+        "child_ids": []
+    },
+    "60": {
+        "id": 60,
+        "pid": 46,
+        "name": "I组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2663
+        ],
+        "leader_name": [
+            "谭湘洪"
+        ],
+        "target_amount": "128000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-I组",
+        "child_ids": []
+    },
+    "61": {
+        "id": 61,
+        "pid": 46,
+        "name": "J组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2772
+        ],
+        "leader_name": [
+            "王悦"
+        ],
+        "target_amount": "90000.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-J组",
+        "child_ids": []
+    },
+    "62": {
+        "id": 62,
+        "pid": 46,
+        "name": "周民琴",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            414
+        ],
+        "leader_name": [
+            "周民琴"
+        ],
+        "target_amount": "99211.00",
+        "parents": [
+            46
+        ],
+        "depth": 1,
+        "name_path": "亚马逊二部-周民琴",
+        "child_ids": []
+    },
+    "85": {
+        "id": 85,
+        "pid": 0,
+        "name": "亚马逊武汉",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            272
+        ],
+        "leader_name": [
+            "田倩娴"
+        ],
+        "target_amount": "2715841.98",
+        "parents": [],
+        "depth": 0,
+        "name_path": "亚马逊武汉",
+        "child_ids": [
+            86,
+            91,
+            92,
+            93,
+            94
+        ]
+    },
+    "86": {
+        "id": 86,
+        "pid": 85,
+        "name": "一部",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            1830
+        ],
+        "leader_name": [
+            "郑悦"
+        ],
+        "target_amount": "967241.78",
+        "parents": [
+            85
+        ],
+        "depth": 1,
+        "name_path": "亚马逊武汉-一部",
+        "child_ids": [
+            87,
+            88,
+            89,
+            90,
+            102,
+            103
+        ]
+    },
+    "87": {
+        "id": 87,
+        "pid": 86,
+        "name": "一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1297
+        ],
+        "leader_name": [
+            "张冰"
+        ],
+        "target_amount": "129686.05",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-一组",
+        "child_ids": []
+    },
+    "88": {
+        "id": 88,
+        "pid": 86,
+        "name": "二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1904
+        ],
+        "leader_name": [
+            "陈凡-销售"
+        ],
+        "target_amount": "199932.66",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-二组",
+        "child_ids": []
+    },
+    "89": {
+        "id": 89,
+        "pid": 86,
+        "name": "三组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1911
+        ],
+        "leader_name": [
+            "李瑞华"
+        ],
+        "target_amount": "124282.46",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-三组",
+        "child_ids": []
+    },
+    "90": {
+        "id": 90,
+        "pid": 86,
+        "name": "四组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1914
+        ],
+        "leader_name": [
+            "宋天赐"
+        ],
+        "target_amount": "156703.98",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-四组",
+        "child_ids": []
+    },
+    "102": {
+        "id": 102,
+        "pid": 86,
+        "name": "十四组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1919
+        ],
+        "leader_name": [
+            "万品升"
+        ],
+        "target_amount": "190854.63",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-十四组",
+        "child_ids": []
+    },
+    "103": {
+        "id": 103,
+        "pid": 86,
+        "name": "十五组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1924
+        ],
+        "leader_name": [
+            "彭理"
+        ],
+        "target_amount": "165782.00",
+        "parents": [
+            85,
+            86
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-一部-十五组",
+        "child_ids": []
+    },
+    "91": {
+        "id": 91,
+        "pid": 85,
+        "name": "二部",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            1894
+        ],
+        "leader_name": [
+            "皮海山"
+        ],
+        "target_amount": "383654.56",
+        "parents": [
+            85
+        ],
+        "depth": 1,
+        "name_path": "亚马逊武汉-二部",
+        "child_ids": [
+            95,
+            96
+        ]
+    },
+    "95": {
+        "id": 95,
+        "pid": 91,
+        "name": "六组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2565
+        ],
+        "leader_name": [
+            "王婷-武汉"
+        ],
+        "target_amount": "189125.49",
+        "parents": [
+            85,
+            91
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-二部-六组",
+        "child_ids": []
+    },
+    "96": {
+        "id": 96,
+        "pid": 91,
+        "name": "七组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1896
+        ],
+        "leader_name": [
+            "蔡庐山"
+        ],
+        "target_amount": "194529.07",
+        "parents": [
+            85,
+            91
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-二部-七组",
+        "child_ids": []
+    },
+    "92": {
+        "id": 92,
+        "pid": 85,
+        "name": "三部",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            1895
+        ],
+        "leader_name": [
+            "代婷-Amazon"
+        ],
+        "target_amount": "289632.17",
+        "parents": [
+            85
+        ],
+        "depth": 1,
+        "name_path": "亚马逊武汉-三部",
+        "child_ids": [
+            97,
+            98
+        ]
+    },
+    "97": {
+        "id": 97,
+        "pid": 92,
+        "name": "八组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            3789
+        ],
+        "leader_name": [
+            "张千"
+        ],
+        "target_amount": "84295.93",
+        "parents": [
+            85,
+            92
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-三部-八组",
+        "child_ids": []
+    },
+    "98": {
+        "id": 98,
+        "pid": 92,
+        "name": "九组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1897
+        ],
+        "leader_name": [
+            "陈朝辉"
+        ],
+        "target_amount": "205336.24",
+        "parents": [
+            85,
+            92
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-三部-九组",
+        "child_ids": []
+    },
+    "93": {
+        "id": 93,
+        "pid": 85,
+        "name": "四部",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            1833
+        ],
+        "leader_name": [
+            "卢艺"
+        ],
+        "target_amount": "637623.06",
+        "parents": [
+            85
+        ],
+        "depth": 1,
+        "name_path": "亚马逊武汉-四部",
+        "child_ids": [
+            99,
+            100,
+            101
+        ]
+    },
+    "99": {
+        "id": 99,
+        "pid": 93,
+        "name": "十组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            379
+        ],
+        "leader_name": [
+            "何曼"
+        ],
+        "target_amount": "226950.58",
+        "parents": [
+            85,
+            93
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-四部-十组",
+        "child_ids": []
+    },
+    "100": {
+        "id": 100,
+        "pid": 93,
+        "name": "十一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2268
+        ],
+        "leader_name": [
+            "陆杰"
+        ],
+        "target_amount": "226950.58",
+        "parents": [
+            85,
+            93
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-四部-十一组",
+        "child_ids": []
+    },
+    "101": {
+        "id": 101,
+        "pid": 93,
+        "name": "十二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2288
+        ],
+        "leader_name": [
+            "罗娟"
+        ],
+        "target_amount": "183721.90",
+        "parents": [
+            85,
+            93
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-四部-十二组",
+        "child_ids": []
+    },
+    "94": {
+        "id": 94,
+        "pid": 85,
+        "name": "五部",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            1829
+        ],
+        "leader_name": [
+            "王倩-亚马逊"
+        ],
+        "target_amount": "437690.41",
+        "parents": [
+            85
+        ],
+        "depth": 1,
+        "name_path": "亚马逊武汉-五部",
+        "child_ids": [
+            104,
+            105,
+            106
+        ]
+    },
+    "104": {
+        "id": 104,
+        "pid": 94,
+        "name": "十六组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1887
+        ],
+        "leader_name": [
+            "王海燕"
+        ],
+        "target_amount": "145896.80",
+        "parents": [
+            85,
+            94
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-五部-十六组",
+        "child_ids": []
+    },
+    "105": {
+        "id": 105,
+        "pid": 94,
+        "name": "十七组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1889
+        ],
+        "leader_name": [
+            "王畅"
+        ],
+        "target_amount": "156703.98",
+        "parents": [
+            85,
+            94
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-五部-十七组",
+        "child_ids": []
+    },
+    "106": {
+        "id": 106,
+        "pid": 94,
+        "name": "十八组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2305
+        ],
+        "leader_name": [
+            "陈丹"
+        ],
+        "target_amount": "135089.63",
+        "parents": [
+            85,
+            94
+        ],
+        "depth": 2,
+        "name_path": "亚马逊武汉-五部-十八组",
+        "child_ids": []
+    },
+    "48": {
+        "id": 48,
+        "pid": 0,
+        "name": "品牌一部",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            2607
+        ],
+        "leader_name": [
+            "韩田田"
+        ],
+        "target_amount": "2871088.00",
+        "parents": [],
+        "depth": 0,
+        "name_path": "品牌一部",
+        "child_ids": [
+            68,
+            69,
+            70
+        ]
+    },
+    "68": {
+        "id": 68,
+        "pid": 48,
+        "name": "一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1231
+        ],
+        "leader_name": [
+            "余婷慧"
+        ],
+        "target_amount": "1569262.00",
+        "parents": [
+            48
+        ],
+        "depth": 1,
+        "name_path": "品牌一部-一组",
+        "child_ids": []
+    },
+    "69": {
+        "id": 69,
+        "pid": 48,
+        "name": "二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            305
+        ],
+        "leader_name": [
+            "戴怡洁"
+        ],
+        "target_amount": "1256062.00",
+        "parents": [
+            48
+        ],
+        "depth": 1,
+        "name_path": "品牌一部-二组",
+        "child_ids": []
+    },
+    "70": {
+        "id": 70,
+        "pid": 48,
+        "name": "代管",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2607
+        ],
+        "leader_name": [
+            "韩田田"
+        ],
+        "target_amount": "45764.00",
+        "parents": [
+            48
+        ],
+        "depth": 1,
+        "name_path": "品牌一部-代管",
+        "child_ids": []
+    },
+    "49": {
+        "id": 49,
+        "pid": 0,
+        "name": "品牌二部",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            2607
+        ],
+        "leader_name": [
+            "韩田田"
+        ],
+        "target_amount": "641650.00",
+        "parents": [],
+        "depth": 0,
+        "name_path": "品牌二部",
+        "child_ids": [
+            71,
+            72
+        ]
+    },
+    "71": {
+        "id": 71,
+        "pid": 49,
+        "name": "一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1854
+        ],
+        "leader_name": [
+            "聂香萍"
+        ],
+        "target_amount": "303259.33",
+        "parents": [
+            49
+        ],
+        "depth": 1,
+        "name_path": "品牌二部-一组",
+        "child_ids": []
+    },
+    "72": {
+        "id": 72,
+        "pid": 49,
+        "name": "二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2192
+        ],
+        "leader_name": [
+            "张浩文"
+        ],
+        "target_amount": "338390.67",
+        "parents": [
+            49
+        ],
+        "depth": 1,
+        "name_path": "品牌二部-二组",
+        "child_ids": []
+    },
+    "51": {
+        "id": 51,
+        "pid": 0,
+        "name": "汽配事业部",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            426
+        ],
+        "leader_name": [
+            "张银"
+        ],
+        "target_amount": "2416884.70",
+        "parents": [],
+        "depth": 0,
+        "name_path": "汽配事业部",
+        "child_ids": [
+            81,
+            82,
+            83,
+            84
+        ]
+    },
+    "81": {
+        "id": 81,
+        "pid": 51,
+        "name": "ebay二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1749
+        ],
+        "leader_name": [
+            "毛转"
+        ],
+        "target_amount": "499110.40",
+        "parents": [
+            51
+        ],
+        "depth": 1,
+        "name_path": "汽配事业部-ebay二组",
+        "child_ids": []
+    },
+    "82": {
+        "id": 82,
+        "pid": 51,
+        "name": "ebay一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1583
+        ],
+        "leader_name": [
+            "彭芬"
+        ],
+        "target_amount": "900119.30",
+        "parents": [
+            51
+        ],
+        "depth": 1,
+        "name_path": "汽配事业部-ebay一组",
+        "child_ids": []
+    },
+    "83": {
+        "id": 83,
+        "pid": 51,
+        "name": "亚马逊二组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1848
+        ],
+        "leader_name": [
+            "曾美"
+        ],
+        "target_amount": "558913.00",
+        "parents": [
+            51
+        ],
+        "depth": 1,
+        "name_path": "汽配事业部-亚马逊二组",
+        "child_ids": []
+    },
+    "84": {
+        "id": 84,
+        "pid": 51,
+        "name": "亚马逊一组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1837
+        ],
+        "leader_name": [
+            "张浩"
+        ],
+        "target_amount": "458742.00",
+        "parents": [
+            51
+        ],
+        "depth": 1,
+        "name_path": "汽配事业部-亚马逊一组",
+        "child_ids": []
+    },
+    "2": {
+        "id": 2,
+        "pid": 0,
+        "name": "新平台",
+        "type": 0,
+        "status": 0,
+        "is_bottom": 0,
+        "leader_id": [
+            494
+        ],
+        "leader_name": [
+            "赵梨燕"
+        ],
+        "target_amount": "2865380.00",
+        "parents": [],
+        "depth": 0,
+        "name_path": "新平台",
+        "child_ids": [
+            10,
+            11,
+            15,
+            16,
+            30,
+            31,
+            32,
+            33
+        ]
+    },
+    "10": {
+        "id": 10,
+        "pid": 2,
+        "name": "Shopee1组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1942
+        ],
+        "leader_name": [
+            "谢珊霞"
+        ],
+        "target_amount": "562000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Shopee1组",
+        "child_ids": []
+    },
+    "11": {
+        "id": 11,
+        "pid": 2,
+        "name": "Shopee2组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1943
+        ],
+        "leader_name": [
+            "陈奕敏"
+        ],
+        "target_amount": "240000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Shopee2组",
+        "child_ids": []
+    },
+    "15": {
+        "id": 15,
+        "pid": 2,
+        "name": "Walmalt组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2251
+        ],
+        "leader_name": [
+            "熊凡"
+        ],
+        "target_amount": "440000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Walmalt组",
+        "child_ids": []
+    },
+    "16": {
+        "id": 16,
+        "pid": 2,
+        "name": "VOVA组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            2716
+        ],
+        "leader_name": [
+            "简清林"
+        ],
+        "target_amount": "320000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-VOVA组",
+        "child_ids": [
+            17
+        ]
+    },
+    "17": {
+        "id": 17,
+        "pid": 16,
+        "name": "joom mymall组",
+        "type": 1,
+        "status": 1,
+        "is_bottom": 1,
+        "leader_id": [
+            1165
+        ],
+        "leader_name": [
+            "唐玉"
+        ],
+        "target_amount": 0,
+        "parents": [
+            2,
+            16
+        ],
+        "depth": 2,
+        "name_path": "新平台-VOVA组-joom mymall组",
+        "child_ids": []
+    },
+    "30": {
+        "id": 30,
+        "pid": 2,
+        "name": "Lazada\/Paytm\/Jumia组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1165
+        ],
+        "leader_name": [
+            "唐玉"
+        ],
+        "target_amount": "341380.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Lazada\/Paytm\/Jumia组",
+        "child_ids": []
+    },
+    "31": {
+        "id": 31,
+        "pid": 2,
+        "name": "Joom组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1165
+        ],
+        "leader_name": [
+            "唐玉"
+        ],
+        "target_amount": "785000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Joom组",
+        "child_ids": []
+    },
+    "32": {
+        "id": 32,
+        "pid": 2,
+        "name": "Mymall组",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1165
+        ],
+        "leader_name": [
+            "唐玉"
+        ],
+        "target_amount": "149000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-Mymall组",
+        "child_ids": []
+    },
+    "33": {
+        "id": 33,
+        "pid": 2,
+        "name": "合作公司",
+        "type": 1,
+        "status": 0,
+        "is_bottom": 1,
+        "leader_id": [
+            1942
+        ],
+        "leader_name": [
+            "谢珊霞"
+        ],
+        "target_amount": "28000.00",
+        "parents": [
+            2
+        ],
+        "depth": 1,
+        "name_path": "新平台-合作公司",
+        "child_ids": []
+    },
+    "child_ids": [
+      18,
+       50,
+      19,
+      47,
+      1,
+      46,
+      85,
+      48,
+      49,
+      51,
+      2
+    ]
+}
